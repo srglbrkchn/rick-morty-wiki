@@ -27,10 +27,14 @@ function App() {
 
     return (
         <div className="App">
+            <h1 className="text-center ubuntu my-4">Rick & Morty <span className="text-primary">WiKi</span> </h1>
             <h1 className="text-center mb-3">Characters</h1>
+
             <div className="container">
                 <div className="row">
-                    Filter component will be placed here
+                    <div className="col-3">
+                        <Filter />
+                    </div>
                     <div className="col-lg-8 col-12">
                         <div className="row">
                             <Card results={results} />

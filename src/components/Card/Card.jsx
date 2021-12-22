@@ -8,6 +8,7 @@ const Card = ({results}) => {
     if (results) {
         display = results.map((result) => {
             let {id, image, name, status, location} = result;
+
             return (
                 <div
                     key={id}
@@ -22,8 +23,18 @@ const Card = ({results}) => {
                             </div>
                         </div>
                     </div>
+                    {() => {
+                        if (status === "Dead") {
+                            return (
+                                <div className={`${styles.badge} badge bg-danger position-absolute`}>
+                                    {status}
+                                </div>
+                            );
+                        } else if (status === "Alive") {} else {}
+                    }}
 
                 </div>
+
             );
         });
 
@@ -33,7 +44,7 @@ const Card = ({results}) => {
 
     return <> {
         display
-    } < />;
+    } </>;
 }
 
 export default Card;
