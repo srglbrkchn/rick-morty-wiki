@@ -11,10 +11,12 @@ import Search from "./components/Search/Search";
 
 
 function App() {
+    // ~~~~~~ Data Fetching Section 
     let [fetchedData, setFetchedData] = useState([]);
+    let [pageNumber, setPageNumber]= useState(1);
+    let api = `https://rickandmortyapi.com/api/character/?page=${pageNumber}`;
 
-    let api = `https://rickandmortyapi.com/api/character/?page=1`;
-    // fetch data from api
+    // fetch data from api using useEffect hook 
     useEffect(()=>{
         (async function() {
             let data = await fetch(api).then((res)=>res.json());
@@ -22,7 +24,9 @@ function App() {
         })();
     }, [api]);
 
+    // Destructure fetchedData into info and results inorder to use then in different components
     let {info, results} = fetchedData;
+    //  ~~~~~~~
     
 
     return (
