@@ -1,6 +1,6 @@
 $radius: 10px;
 .card {
-  border: 2px solid #0b5ed7;
+  border: 2px solid #7aafec;
   border-radius: $radius;
 }
 .content {
@@ -10,6 +10,8 @@ $radius: 10px;
   border-radius: $radius $radius 0 0;
 }
 .badge {
-  top: 10px; right: 20px;
+  top: 10px; 
+  right: 20px;
   font-size: 17px;
+  text-transform: capitalize;
 }

@@ -6,6 +6,7 @@ const Card = ({results}) => {
     let display;
 
     if (results) {
+        // Mapping the results from API into character cards
         display = results.map((result) => {
             let {id, image, name, status, location} = result;
 
@@ -18,21 +19,15 @@ const Card = ({results}) => {
                         <div className={`${styles.content}`}>
                             <div className="fs-5 fw-bold mb-4">{name}</div>
                             <div className="">
-                                <div className="fs-6 fw-normal">Last Location</div>
-                                <div className="fs-5">{location.name}</div>
+                                <div className="fs-5 fw-normal">Last Location</div>
+                                <div className="fs-6">{location.name}</div>
                             </div>
                         </div>
                     </div>
-                    {() => {
-                        if (status === "Dead") {
-                            return (
-                                <div className={`${styles.badge} badge bg-danger position-absolute`}>
-                                    {status}
-                                </div>
-                            );
-                        } else if (status === "Alive") {} else {}
-                    }}
 
+                    <div className={`${styles.badge} badge bg-danger position-absolute`}>
+                        {status}
+                    </div>
                 </div>
 
             );
