@@ -31,7 +31,7 @@ function App() {
 
     return (
         <div className="App">
-            <h1 className="text-center ubuntu my-4">Rick & Morty <span className="text-primary">WiKi</span> </h1>
+            <h1 className="text-center ubuntu my-4">Rick & Morty <span style={{color: "#7aafec"}}>WiKi</span> </h1>
             <h1 className="text-center mb-3">Characters</h1>
 
             <div className="container">

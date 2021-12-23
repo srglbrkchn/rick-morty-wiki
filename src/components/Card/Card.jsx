@@ -25,9 +25,30 @@ const Card = ({results}) => {
                         </div>
                     </div>
 
-                    <div className={`${styles.badge} badge bg-danger position-absolute`}>
-                        {status}
-                    </div>
+                    {/* Use IIFE function to return the badge based on status the moment cards are loaded */}
+                    {(() => {
+                        if (status === "Dead") {
+                            return (
+                                <div className={`${styles.badge} badge bg-danger position-absolute`}>
+                                    {status}
+                                </div>
+                            )
+                        }else if(status === "Alive") {
+                            return (
+                                <div className={`${styles.badge} badge bg-success position-absolute`}>
+                                    {status}
+                                </div>
+                            )
+                        }else {
+                            return (
+                                <div className={`${styles.badge} badge bg-secondary position-absolute`}>
+                                    {status}
+                                </div>
+                            )
+                                }
+                        })()
+                    }
+
                 </div>
 
             );
@@ -39,7 +60,7 @@ const Card = ({results}) => {
 
     return <> {
         display
-    } </>;
+    } < />;
 }
 
 export default Card;
