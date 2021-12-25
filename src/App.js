@@ -34,6 +34,8 @@ function App() {
             <h1 className="text-center ubuntu my-4">Rick & Morty <span style={{color: "#7aafec"}}>WiKi</span> </h1>
             <h1 className="text-center mb-3">Characters</h1>
 
+            <Search />
+            
             <div className="container">
                 <div className="row">
                     <div className="col-3">
