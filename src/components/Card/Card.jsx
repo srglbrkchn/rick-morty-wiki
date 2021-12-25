@@ -60,7 +60,7 @@ const Card = ({results}) => {
 
     return <> {
         display
-    } < />;
+    } </>;
 }
 
 export default Card;
