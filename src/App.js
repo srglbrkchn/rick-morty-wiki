@@ -14,7 +14,7 @@ function App() {
     // ~~~~~~ Data Fetching Section 
     let [fetchedData, setFetchedData] = useState([]);
     let [pageNumber, setPageNumber]= useState(1);
-    let[search, setSearch] = useState("rick");
+    let[search, setSearch] = useState("");
     let api = `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${search}`;
 
     // fetch data from api using useEffect hook 
@@ -35,7 +35,7 @@ function App() {
             <h1 className="text-center ubuntu my-4">Rick & Morty <span style={{color: "#7aafec"}}>WiKi</span> </h1>
             <h1 className="text-center mb-3">Characters</h1>
 
-            <Search />
+            <Search setSearch={setSearch} setPageNumber={setPageNumber} />
 
             <div className="container">
                 <div className="row">
