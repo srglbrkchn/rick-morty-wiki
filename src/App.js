@@ -39,9 +39,7 @@ function App() {
 
             <div className="container">
                 <div className="row">
-                    <div className="col-3">
                         <Filter />
-                    </div>
                     <div className="col-lg-8 col-12">
                         <div className="row">
                             <Card results={results} />
