@@ -2,7 +2,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap";
 import React, {useState, useEffect} from "react";
-import './App.css';
+import "./App.css";
 import Card from "./components/Card/Card";
 import Filter from "./components/Filter/Filter";
 import Navbar from "./components/Navbar/Navbar";
