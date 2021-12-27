@@ -6,6 +6,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+a {
+  color: beige;
+  text-decoration: none;
+}
+
 .ubuntu {
   font-family: "Ubuntu" !important;
 }

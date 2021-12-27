@@ -1,32 +1,25 @@
-import React from 'react'
+import React from "react";
+import ReactPaginate from "react-paginate";
 
-const Pagination = (props) => {
-
-    let setPageNumber = props.setPageNumber;
-
-    const next = () => {
-        setPageNumber((preValue) => {
-            return preValue + 1;
-        });
-    }
-
-    const prev = () => {
-        setPageNumber((preValue) => {
-            if(preValue === 1) {
-                return 1;
-            }else {
-                return preValue - 1;
-            }
-        });
-    }
-
+const Pagination = ({info, setPageNumber}) => {
 
     return (
-        <div className="container d-flex justify-content-center gap-5 my-5">
-           <button className="btn btn-primary" onClick={prev}>Previous</button>
-           <button className="btn btn-primary" onClick={next}>Next</button>
-        </div>
-    )
+        // Check if the info is fetched from the API before add pages to the component, to avoid code breaks.
+
+        <ReactPaginate
+            className= "pagination justify-content-center gap-2 my-4"
+            nextLabel="Next"
+            previousLabel="Previous"
+            nextClassName="btn btn-primary"
+            previousClassName="btn btn-primary"
+            pageClassName="page-item"
+            pageLinkClassName="page-link"
+            onPageChange={(data)=> {
+                setPageNumber(data.selected);
+            }}
+            pageCount={info?.pages} 
+        />
+    );
 }
 
 export default Pagination;
