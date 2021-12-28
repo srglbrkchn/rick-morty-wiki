@@ -11,7 +11,7 @@ const Filter = () => {
                 style={{
                 cursor: "pointer"
             }}
-                className="text-center text-decoration-underline text-primary">Clear Filters</div>
+                className="text-center text-decoration-underline text-primary mb-4">Clear Filters</div>
             <div className="accordion" id="accordionExample">
                 <Status />
                 <Species/>
