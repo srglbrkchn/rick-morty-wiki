@@ -1,19 +1,11 @@
 import React from "react";
 
-const FilterBtn = () => {
+const FilterBtn = ({name, index, item}) => {
     return (
         <div>
             <div className="form-check">
-                <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
-                <label className="form-check-label" for="flexRadioDefault1">
-                    Default radio
-                </label>
-            </div>
-            <div className="form-check">
-                <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked />
-                <label className="form-check-label" for="flexRadioDefault2">
-                    Default checked radio
-                </label>
+                <input className="form-check-input" type="radio" name={name} id={`${name}-${index}`} />
+                <label style={{textTransform: "capitalize"}} class="btn btn-outline-primary" for={`${name}-${index}`} >{item}</label>
             </div>
         </div>
     );

@@ -1,6 +1,9 @@
 import React from "react"
+import FilterBtn from "../FilterBTN";
 
 const Gender = () => {
+    let gender = ["female", "male", "genderless", "unknown"];
+
     return (
         <div className="accordion-item">
                     <h2 className="accordion-header" id="headingOne">
@@ -20,6 +23,11 @@ const Gender = () => {
                         aria-labelledby="headingOne"
                         data-bs-parent="#accordionExample">
                         <div className="accordion-body">
+                            {  gender.map((item, index) => {
+                                return(
+                                    <FilterBtn key={index} index={index} name="gender" item={item} />
+                                );
+                            })}
                         </div>
                     </div>
                 </div>

@@ -1,6 +1,9 @@
-import React from "react"
+import React from "react";
+import FilterBTN from "../FilterBTN";
 
 function Status() {
+    let status = ["Alive", "Dead", "Unknown"];
+
     return (
         <div className="accordion-item">
         <h2 className="accordion-header" id="headingThree">
@@ -11,7 +14,7 @@ function Status() {
                 data-bs-target="#collapseThree"
                 aria-expanded="false"
                 aria-controls="collapseThree">
-                Accordion Item #3
+                Status
             </button>
         </h2>
         <div
@@ -20,13 +23,9 @@ function Status() {
             aria-labelledby="headingThree"
             data-bs-parent="#accordionExample">
             <div className="accordion-body">
-                <strong>This is the third item"s accordion body.</strong>
-                It is hidden by default, until the collapse plugin adds the appropriate classes
-                that we use to style each element. These classes control the overall appearance,
-                as well as the showing and hiding via CSS transitions. You can modify any of
-                this with custom CSS or overriding our default variables. It"s also worth noting
-                that just about any HTML can go within the
-                <code>.accordion-body</code>, though the transition does limit overflow.
+                {status.map((item, index)=> {
+                     return <FilterBTN key={index} name="status" index={index} item={item} />;
+                })}  
             </div>
         </div>
     </div>
