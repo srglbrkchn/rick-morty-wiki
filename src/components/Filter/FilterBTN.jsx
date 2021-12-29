@@ -1,8 +1,20 @@
 import React from "react";
 
-const FilterBtn = ({name, index, item}) => {
+const FilterBtn = ({name, index, item, task, setPageNumber}) => {
     return (
         <div>
+            <style jsx>
+                {`
+                    input[type="radio"] {
+                        display: none
+                    }
+                    .form-check-input:checked + label {
+                        background-color: #7aafec;
+                        color: #fff;
+                        border-color: #7aafec;
+                    }
+                `}
+            </style>
             <div className="form-check">
                 <input className="form-check-input" type="radio" name={name} id={`${name}-${index}`} />
                 <label style={{textTransform: "capitalize"}} class="btn btn-outline-primary" for={`${name}-${index}`} >{item}</label>
