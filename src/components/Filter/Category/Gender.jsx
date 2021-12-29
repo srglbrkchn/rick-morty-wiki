@@ -1,5 +1,5 @@
 import React from "react"
-import FilterBtn from "../FilterBTN";
+import FilterBTN from "../FilterBTN";
 
 const Gender = () => {
     let gender = ["female", "male", "genderless", "unknown"];
@@ -25,7 +25,7 @@ const Gender = () => {
                         <div className="accordion-body">
                             {  gender.map((item, index) => {
                                 return(
-                                    <FilterBtn key={index} index={index} name="gender" item={item} />
+                                    <FilterBTN key={index} index={index} name="gender" item={item} />
                                 );
                             })}
                         </div>
